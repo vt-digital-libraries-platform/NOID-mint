@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="noid-mint",
-    version="0.0.1",
+    version="0.0.2",
     author="Yinlin Chen, Tingting Jiang, Lee Hunter, Jim Tuttle",
     author_email="ylchen@vt.edu, virjtt03@vt.edu, whunter@vt.edu, jjt@vt.edu",
     description="Mint NOID",
@@ -16,9 +16,7 @@ setuptools.setup(
     scripts=['bin/noid'],
     packages=setuptools.find_packages(),
     install_requires=[
-        'nose',
-        'pyyaml',
-        'cryptography'
+        'pyyaml'
     ],
     classifiers=[
         "Programming Language :: Python :: 3.6",
