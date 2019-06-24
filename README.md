@@ -6,6 +6,7 @@ create directory at command line
 setup virtual environment: `python3 -m venv ENV`
 activate the environment: `source ENV/bin/activate`
 
+pip install noid-mint
 git clone https://github.com/aprigge/NOID-mint.git
 
 in command line change directory to new folder: 'cd NOID-mint'
@@ -18,6 +19,7 @@ in command line install requirements 'pip3 install -r requirements.txt'
 * Generate noid
 ```
 format .yml file to include appropriate ark shoulder which shoulder be in the same directory as the noid_ark.py file
+you can generate a single noid in the command line using noid -f [name of file].yml
 
 
 configure noid_ark.py with the four inputs the function takes:
