@@ -2,6 +2,9 @@ NOID-mint Python Package
 
 ## Installation
 ```
+create directory at command line
+setup virtual environment: `python3 -m venv ENV`
+activate the environment: `source ENV/bin/activate`
 
 git clone https://github.com/aprigge/NOID-mint.git
 python setup.py install
@@ -12,13 +15,21 @@ python setup.py install
 ```
 format .yml file to include appropriate ark shoulder
 noid -f [name of file].yml
+
+configure noid_ark.py with the four inputs the function takes:
+1. the file path to the csv input file
+2. the configured yml file which sets up the specifics for the ark
+3. the parent ark
+4. the name of the output file
+
+run noid_ark.py in command line
 ```
 
 ## Testing
 ```
 nosetests
 ```
-
+The NOID-Mint was forked from the following:
 ## Authors
 * Virginia Tech Libraries - Digital Libraries Development developers
 	* [Yinlin Chen](https://github.com/yinlinchen)
