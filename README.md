@@ -2,10 +2,7 @@ NOID-mint Python Package
 
 ## Installation
 ```
-pip install noid-mint
-```
-or
-```
+
 git clone git@github.com:VTUL/NOID.git
 python setup.py install
 ```
@@ -13,7 +10,8 @@ python setup.py install
 ## Usage
 * Generate noid
 ```
-noid -f local.yml
+format .yml file to include appropriate ark shoulder
+noid -f [name of file].yml
 ```
 
 ## Testing
