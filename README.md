@@ -3,7 +3,7 @@ NOID-mint Python Package
 ## Installation
 ```
 
-git clone git@github.com:VTUL/NOID.git
+git clone https://github.com/aprigge/NOID-mint.git
 python setup.py install
 ```
 
