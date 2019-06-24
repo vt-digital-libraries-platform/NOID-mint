@@ -14,7 +14,7 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 	data= pd.read_csv(file_path, sep=',', delimiter=None, header='infer')
 
 #Create a list that the generated item arks will be appended to. 
-	ark_list = ['']
+	ark_list = [parent_ark]
 
 
 #A loop to create the necessary amount of unique ARKs and add them to the ark_list
