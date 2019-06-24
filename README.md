@@ -29,6 +29,7 @@ configure noid_ark.py with the four inputs the function takes:
 4. the name of the output file
 
 run noid_ark.py in command line
+the parent ark input and new item ark will be appended to the last two columns of the csv file
 ```
 
 ## Testing
