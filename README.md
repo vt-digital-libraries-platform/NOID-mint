@@ -9,7 +9,9 @@ activate the environment: `source ENV/bin/activate`
 git clone https://github.com/aprigge/NOID-mint.git
 
 in command line change directory to new folder: 'cd NOID-mint'
-python3 setup.py install
+in command line 'python3 setup.py install'
+in command line install requirements 'pip3 install -r requirements.txt'
+
 ```
 
 ## Usage
