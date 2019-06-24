@@ -15,6 +15,7 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 #Create a list that the generated item arks will be appended to. 
 	ark_list = [parent_ark]
+	parent_ark_list = ['']
 
 
 #A loop to create the necessary amount of unique ARKs and add them to the ark_list
@@ -27,9 +28,10 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 		cmd = ['noid', '-f', noid_file]
 		item_ark = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True).communicate()[0]
 		ark_list.append(item_ark)
+		parent_ark_list.append(parent_ark)
 
 #Wrties the list of the item arks to a new column in the DatFrame	
-	data['Parent Ark'] = parent_ark
+	data['Parent Ark'] = parent_ark_list
 	data['Item Ark'] = ark_list
 	
 
