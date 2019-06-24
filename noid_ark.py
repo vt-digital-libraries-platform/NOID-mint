@@ -37,11 +37,3 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
 
-
-
-#creating the needed files for new item arks. this can be changed to accomodate new files
-create_arks('Sinai_57.csv', 'sinai_57.yml', 'ark:/21198/z15q60cw', 'sinai_57_arks.csv')
-create_arks('Sinai_65.csv', 'sinai_65.yml', 'ark:/21198/z1x64r73', 'sinai_65_arks.csv')
-create_arks('Sinai_67.csv', 'sinai_67.yml', 'ark:/21198/z1sf40hr', 'sinai_67_arks.csv')
-create_arks('Sinai_100.csv', 'sinai_100.yml', 'ark:/21198/z1ns1z7t', 'sinai_100_arks.csv')
-create_arks('Sinai_60.csv', 'sinai_60.yml', 'ark:/21198/z11z57pm', 'sinai_60_arks.csv')
