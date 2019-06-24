@@ -29,8 +29,8 @@ run noid_ark.py in command line
 ```
 nosetests
 ```
-The NOID-Mint was forked from the following:
-## Authors
+
+## The NOID-Mint was forked from the following authors
 * Virginia Tech Libraries - Digital Libraries Development developers
 	* [Yinlin Chen](https://github.com/yinlinchen)
 	* [Tingting Jiang](https://github.com/tingtingjh)
