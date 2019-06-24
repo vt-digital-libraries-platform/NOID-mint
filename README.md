@@ -3,14 +3,17 @@ NOID-mint Python Package
 ## Installation
 ```
 create directory at command line
-setup virtual environment: `python3 -m venv ENV`
-activate the environment: `source ENV/bin/activate`
 
+setup virtual environment: `python3 -m venv ENV`
+
+activate the environment: `source ENV/bin/activate`
 
 git clone https://github.com/aprigge/NOID-mint.git
 
 in command line change directory to new folder: 'cd NOID-mint'
+
 in command line 'python setup.py install'
+
 in command line install requirements 'pip install -r requirements.txt'
 
 ```
