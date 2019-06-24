@@ -7,7 +7,9 @@ setup virtual environment: `python3 -m venv ENV`
 activate the environment: `source ENV/bin/activate`
 
 git clone https://github.com/aprigge/NOID-mint.git
-python setup.py install
+
+in command line change directory to new folder: 'cd NOID-mint'
+python3 setup.py install
 ```
 
 ## Usage
