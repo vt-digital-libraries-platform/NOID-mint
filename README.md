@@ -17,8 +17,8 @@ in command line install requirements 'pip3 install -r requirements.txt'
 ## Usage
 * Generate noid
 ```
-format .yml file to include appropriate ark shoulder
-noid -f [name of file].yml
+format .yml file to include appropriate ark shoulder which shoulder be in the same directory as the noid_ark.py file
+
 
 configure noid_ark.py with the four inputs the function takes:
 1. the file path to the csv input file
