@@ -9,6 +9,19 @@ import pandas as pd
 #the configured yml file which sets up the specifics for the ark, the parent ark, and
 #the name of the output file
 
+#configure yml file automatically read the last 6? digits and write to the naa section of the yml file
+
+def create_noid_yml(parent_ark):
+	noid_file = open("Noid_test.yml", "w+")
+	string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:5])), ('\nnaa: ' + str(parent_ark[5:]))]
+	for s in string:
+		noid_file.write(s)
+
+create_noid_yml('ark:/12345/12345/')
+
+#one at a time?
+
+
 def create_arks(file_path, noid_file, parent_ark, output_file):
 
 	data= pd.read_csv(file_path, sep=',', delimiter=None, header='infer')
@@ -16,7 +29,6 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 #Create a list that the generated item arks will be appended to. 
 	ark_list = [parent_ark]
 	parent_ark_list = ['']
-
 
 #A loop to create the necessary amount of unique ARKs and add them to the ark_list
 #Runs the command line command from the NOID-Mint script
@@ -38,4 +50,6 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 #Writes DataFrame to a new csv file
 
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
+
+create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/12345/12345', 'sinai_output_file.csv')
 
