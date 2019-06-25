@@ -23,6 +23,7 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 	data= pd.read_csv(file_path, sep=',', delimiter=None, header='infer')
 
 #Create a list that the generated item arks will be appended to. 
+#The first item in the parent_ark_list is empty as the manuscript does not have a parent.
 	ark_list = [parent_ark]
 	parent_ark_list = ['']
 
@@ -38,14 +39,16 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 		ark_list.append(item_ark)
 		parent_ark_list.append(parent_ark)
 
-#Wrties the list of the item arks to a new column in the DatFrame	
+#Writes the list of parent ARKs to a new column in the DataFrame		
+#Wrties the list of the item ARKs to a new column in the DatFrame
+
 	data['Parent Ark'] = parent_ark_list
 	data['Item Ark'] = ark_list
 	
-
 #Writes DataFrame to a new csv file
 
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
+
 
 
 
@@ -54,3 +57,5 @@ these two functions are examples
 create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r73', 'sinai_output_file.csv')
 create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r88', 'sinai_output_file1.csv')
 """
+
+
