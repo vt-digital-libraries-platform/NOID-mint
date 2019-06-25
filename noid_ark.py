@@ -9,7 +9,16 @@ import pandas as pd
 #the configured yml file which sets up the specifics for the ark, the parent ark, and
 #the name of the output file
 
+
 def create_arks(file_path, noid_file, parent_ark, output_file):
+
+
+	def create_noid_yml(parent_ark):
+		noid_file = open("Noid_test.yml", "w+")
+		string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:10])), ('\nnaa: ' + str(parent_ark[10:]))]
+		for s in string:
+			noid_file.write(s)
+	create_noid_yml(parent_ark)
 
 	data= pd.read_csv(file_path, sep=',', delimiter=None, header='infer')
 
@@ -17,7 +26,6 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 #The first item in the parent_ark_list is empty as the manuscript does not have a parent.
 	ark_list = [parent_ark]
 	parent_ark_list = ['']
-
 
 #A loop to create the necessary amount of unique ARKs and add them to the ark_list
 #Runs the command line command from the NOID-Mint script
@@ -41,4 +49,13 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
 
-#add the function the the correct inputs here to run the script
+
+
+
+"""
+these two functions are examples
+create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r73', 'sinai_output_file.csv')
+create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r88', 'sinai_output_file1.csv')
+"""
+
+
