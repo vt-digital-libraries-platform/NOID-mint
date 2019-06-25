@@ -13,11 +13,11 @@ import pandas as pd
 
 def create_noid_yml(parent_ark):
 	noid_file = open("Noid_test.yml", "w+")
-	string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:5])), ('\nnaa: ' + str(parent_ark[5:]))]
+	string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:10])), ('\nnaa: ' + str(parent_ark[10:]))]
 	for s in string:
 		noid_file.write(s)
 
-create_noid_yml('ark:/12345/12345/')
+create_noid_yml('ark:/21198/z1x64r73')
 
 #one at a time?
 
