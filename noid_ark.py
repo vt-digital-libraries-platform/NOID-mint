@@ -15,7 +15,7 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 	def create_noid_yml(parent_ark):
 		noid_file = open("Noid_test.yml", "w+")
-		string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:10])), ('\nnaa: ' + str(parent_ark[10:]))]
+		string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:11])), ('\nnaa: ' + str(parent_ark[11:]))]
 		for s in string:
 			noid_file.write(s)
 	create_noid_yml(parent_ark)
