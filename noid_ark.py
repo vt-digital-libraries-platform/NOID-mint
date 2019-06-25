@@ -50,14 +50,12 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
 
 
-#change this so user is prompted in terminal for raw input
-
-#these two functions are examples
-#create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r73', 'sinai_output_file.csv')
-#create_arks('Sinai_100.csv', 'Noid_test.yml', 'ark:/21198/z1x64r88', 'sinai_output_file1.csv')
+#user is prompted in terminal for raw input
 file_path = input('File path for manuscript csv:')
 parent_ark = input('Parent Ark:')
 output_file = input('Name the output csv:')
+
+#runs the function with the user input
 
 create_arks(file_path, 'Noid_test.yml', parent_ark, output_file)
 
