@@ -21,18 +21,15 @@ in command line install requirements 'pip install -r requirements.txt'
 ## Usage
 * Generate noid
 ```
-format .yml file to include appropriate ark shoulder which shoulder be in the same directory as the noid_ark.py file
-you can generate a single noid in the command line using noid -f [name of file].yml
 
 
-configure noid_ark.py with the four inputs the function takes:
+
+run 'python noid_ark.py' in terminal. you will be prompted for:
 1. the file path to the csv input file
-2. the configured yml file which sets up the specifics for the ark
-3. the parent ark
-4. the name of the output file
+2. the parent ark
+3. the name of the output file (needs to end in .csv)
 
-run noid_ark.py in command line
-the parent ark input and new item ark will be appended to the last two columns of the csv file
+the parent ark input and new item ark will be appended to the last two columns of the output csv file
 ```
 
 ## Testing
