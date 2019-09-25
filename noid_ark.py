@@ -14,6 +14,7 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 
 	def create_noid_yml(parent_ark):
+		#parent_ark = read csv and manuscript row
 		noid_file = open("Noid_test.yml", "w+")
 		string = ['template: eeddeede \n',('scheme: ' + str(parent_ark[0:11])), ('\nnaa: ' + str(parent_ark[11:]))]
 		for s in string:
@@ -33,9 +34,10 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 	
 
 	for f in range(1,row_count):
+		#if for each csv row type is equal to page
 
 		cmd = ['noid', '-f', noid_file]
-		item_ark = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True).communicate()[0]
+		item_ark = subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()[0]
 		ark_list.append(item_ark)
 		parent_ark_list.append(parent_ark)
 
@@ -49,11 +51,6 @@ def create_arks(file_path, noid_file, parent_ark, output_file):
 
 	data.to_csv(path_or_buf=output_file, sep=',', na_rep='', float_format=None, index=False)
 
-
-#user is prompted in terminal for raw input
-file_path = input('File path for manuscript csv:')
-parent_ark = input('Parent Ark:')
-output_file = input('Name the output csv:')
 
 #runs the function with the user input
 
