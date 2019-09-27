@@ -1,2 +1,2 @@
-erc.who:UCLA Library
-erc.what: Sinai Test
+erc.who: UCLA Library
+erc.what: Sinai Arabic 89. Four Gospels and Synaxarion : manuscript, 1285. St. Catherine's Monastery, Sinai, Egypt
