@@ -10,7 +10,8 @@ import pandas as pd
 
 #need to add subprocess-- if row type is equal to work, run ezid script
 #at end of that, call the create_arks
-directory = 'Sinai_test/'
+directory = raw_input('File directory:')
+ezid_input = raw_input('EZID username and password:')
 
 for filename in os.listdir(directory):
 	file_path = directory + (str(filename)).strip()
@@ -29,7 +30,8 @@ for filename in os.listdir(directory):
 						string = 'erc.who: UCLA Library', ('\nerc.what: '+str(title))
 						for s in string:
 							mappings_file.write(s)
-				cmd_ezid = ['python', 'ezid.py', 'ucla-library', 'mint', 'ark:/99999/fk4', '@', 'mappings.txt']
+				create_mappings()
+				cmd_ezid = ['python', 'ezid.py', ezid_input, 'mint', 'ark:/99999/fk4', '@', 'mappings.txt']
 				parent_ark = subprocess.Popen(cmd_ezid, stdout=subprocess.PIPE).communicate()[0]
 				parent_ark = (str(parent_ark)).replace('success: ', '')
 				print(parent_ark)
