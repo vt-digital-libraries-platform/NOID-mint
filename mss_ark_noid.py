@@ -49,7 +49,6 @@ def call_ezid(file_path):
 		if row['Object type'] == 'Page':
 			cmd = ['noid', '-f', 'Noid_test.yml']
 			item_ark = subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()[0]
-			print(item_ark)
 			item_ark_list.append(item_ark)
 			parent_ark_list.append(parent_ark)
 
@@ -72,8 +71,7 @@ ark_shoulder = raw_input('ARK shoulder:')
 for filename in os.listdir(directory):
 	if '.csv' in filename:
 		file_path = directory + (str(filename))
-		output_file = filename + '_export.csv'
-
+		output_file = str(filename).replace('.csv', '') + '_export.csv'
 		print(filename)
 		call_ezid(file_path)
 		
