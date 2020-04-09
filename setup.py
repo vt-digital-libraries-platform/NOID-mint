@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="noid-mint",
-    version="0.0.2",
+    version="0.0.3",
     author="Yinlin Chen, Tingting Jiang, Lee Hunter, Jim Tuttle",
     author_email="ylchen@vt.edu, virjtt03@vt.edu, whunter@vt.edu, jjt@vt.edu",
     description="Mint NOID",
     license="MIT",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/VTUL/NOID",
+    url="https://github.com/vt-digital-libraries-platform/NOID-mint",
     scripts=['bin/noid'],
     packages=setuptools.find_packages(),
     install_requires=[
