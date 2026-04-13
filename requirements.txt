@@ -2,6 +2,6 @@ autopep8
 nose
 cryptography
 coverage
-pytest==4.3.0
+pytest==9.0.3
 pytest-cov
 pyyaml
